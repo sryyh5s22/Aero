@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aero Shop</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    
+    body {
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+    
+    h1 {
+      color: #f2f2f2;
+      margin-bottom: 30px;
+      font-size: 3em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .button {
+      background-color: rgba(0, 123, 255, 0.8);
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 25px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    
+    .button:hover {
+      background-color: rgba(0, 123, 255, 1);
+      transform: scale(1.05);
+    }
+    
+    .small-text {
+      font-size: 14px;
+      color: lightgray;
+      margin-top: 20px;
+    }
+    
+    .loading {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #007BFF;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 2s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop>
+    <source src="https://files.catbox.moe/rpesmj.mp4" type="video/mp4">
+  </video>
+  <div>
+    <h1>SELAMAT DATANG DI WEBSITE AERO SHOP</h1>
+    <button class="button" onclick="bukaHalaman1()">ALL PRODUK AERO SHOP</button>
+    <button class="button" onclick="bukaHalaman2()">KONTAK AERO SHOP</button>
+    <div class="small-text">PENCET UNTUK MEMBUKA HALAMAN BARU</div>
+    <div class="loading" id="loading"></div>
+  </div>
+  <script>
+    function bukaHalaman1() {
+      document.getElementById("loading").style.display = "block";
+      setTimeout(function() {
+        window.open("https://sryyh5s22.github.io/Aero2/", "_blank");
+        document.getElementById("loading").style.display = "none";
+      }, 2000);
+    }
+    
+    function bukaHalaman2() {
+      document.getElementById("loading").style.display = "block";
+      setTimeout(function() {
+        window.open("https://sryyh5s22.github.io/Aero1/", "_blank");
+        document.getElementById("loading").style.display = "none";
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
